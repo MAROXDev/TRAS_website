@@ -41,17 +41,7 @@ export function HeroSection() {
       {/* Animated Lines */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute h-px bg-gradient-to-r from-transparent via-[#f75a1c]/30 to-transparent"
-            style={{
-              top: `${20 + i * 15}%`,
-              left: "-100%",
-              right: "-100%",
-              animation: `slideRight ${8 + i * 2}s linear infinite`,
-              animationDelay: `${i * 0.5}s`,
-            }}
-          ></div>
+          null
         ))}
       </div>
 
