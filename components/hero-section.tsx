@@ -55,21 +55,21 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Subtitle */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f75a1c]/20 rounded-full mb-6 md:mb-0">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#f75a1c]/20 rounded-full mb-4 sm:mb-6">
             <span className="w-2 h-2 bg-[#f75a1c] rounded-full animate-pulse"></span>
-            <span className="text-[#fc8860] text-sm font-medium">Aceleradora de Negocios</span>
+            <span className="text-[#fc8860] text-xs sm:text-sm font-medium">Aceleradora de Negocios</span>
           </div>
 
           {/* Main Title */}
-          <div className="relative h-48 md:h-64 lg:h-72 overflow-hidden">
+          <div className="relative h-36 sm:h-48 md:h-56 lg:h-64 overflow-hidden">
             {heroSlides.map((slide, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-all duration-700 ${
+                className={`absolute inset-0 transition-all duration-700 flex items-center justify-center ${
                   index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight">
                   {slide.title.map((line, lineIndex) => (
                     <span key={lineIndex} className="block">
                       {line.split(" ").map((word, wordIndex) => (
@@ -92,27 +92,27 @@ export function HeroSection() {
           </div>
 
           {/* Description */}
-          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-8 md:mb-10">
-            Somos tu aliado estratégico para transformar tu emprendimiento en una empresa escalable, rentable y
+          <p className="text-white/70 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 px-2">
+            Somos tu aliado estrategico para transformar tu emprendimiento en una empresa escalable, rentable y
             competitiva.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contacto">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
+            <Link href="/#contacto" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold px-8 py-6 text-lg group"
+                className="w-full sm:w-auto bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg group"
               >
                 Comienza tu transformacion
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/lo-que-hacemos">
+            <Link href="/lo-que-hacemos" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:border-[#f75a1c] font-semibold px-8 py-6 text-lg"
+                className="w-full sm:w-auto border-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:border-[#f75a1c] font-semibold px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
               >
                 Conoce nuestros servicios
               </Button>
@@ -120,13 +120,13 @@ export function HeroSection() {
           </div>
 
           {/* Slide Indicators */}
-          <div className="flex justify-center gap-2 mt-10">
+          <div className="flex justify-center gap-2 mt-8 sm:mt-10">
             {heroSlides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentSlide ? "w-8 bg-[#f75a1c]" : "bg-white/30 hover:bg-white/50"
+                  index === currentSlide ? "w-6 sm:w-8 bg-[#f75a1c]" : "bg-white/30 hover:bg-white/50"
                 }`}
                 aria-label={`Ir a slide ${index + 1}`}
               />
