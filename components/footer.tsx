@@ -16,18 +16,18 @@ export function Footer() {
   return (
     <footer className="bg-[#2a2c44] text-white">
       {/* Marquee */}
-      <div className="bg-gradient-to-r from-[#982704] to-[#f75a1c] py-4 overflow-hidden">
+      <div className="bg-gradient-to-r from-[#982704] to-[#f75a1c] py-3 sm:py-4 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(6)].map((_, i) => (
-            <span key={i} className="mx-8 text-white font-bold text-lg md:text-xl">
-              Acelera tu negocio • Estrategia • Marketing Digital • Tecnología • Formación Empresarial •
+            <span key={i} className="mx-4 sm:mx-8 text-white font-bold text-sm sm:text-lg md:text-xl">
+              Acelera tu negocio • Estrategia • Marketing Digital • Tecnologia • Formacion Empresarial •
             </span>
           ))}
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto px-4 py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">

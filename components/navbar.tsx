@@ -92,36 +92,36 @@ export function Navbar() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "lg:hidden fixed inset-0 top-16 bg-[#2a2c44] transition-transform duration-300 z-40",
+          "lg:hidden fixed inset-0 top-16 bg-[#2a2c44] transition-transform duration-300 z-40 overflow-y-auto",
           isOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
-        <nav className="flex flex-col p-6 gap-4">
+        <nav className="flex flex-col p-4 sm:p-6 gap-2 sm:gap-4 pb-24">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-white text-lg font-medium py-3 border-b border-[#5a6396]/30 hover:text-[#f75a1c] transition-colors"
+              className="text-white text-base sm:text-lg font-medium py-3 border-b border-[#5a6396]/30 hover:text-[#f75a1c] transition-colors active:text-[#f75a1c]"
             >
               {link.label}
             </Link>
           ))}
-          <div className="mt-6 flex flex-col gap-4">
-            <div className="flex items-center gap-3 text-white/80">
-              <Phone className="w-5 h-5 text-[#f75a1c]" />
-              <a href="tel:+524497549353" className="hover:text-[#f75a1c]">
+          <div className="mt-4 sm:mt-6 flex flex-col gap-3 sm:gap-4">
+            <div className="flex items-center gap-3 text-white/80 text-sm sm:text-base">
+              <Phone className="w-5 h-5 text-[#f75a1c] flex-shrink-0" />
+              <a href="tel:+524497549353" className="hover:text-[#f75a1c] active:text-[#f75a1c]">
                 +52 449 754 93 53
               </a>
             </div>
-            <div className="flex items-center gap-3 text-white/80">
-              <Mail className="w-5 h-5 text-[#f75a1c]" />
-              <a href="mailto:aceleradoratras@gmail.com" className="hover:text-[#f75a1c]">
+            <div className="flex items-center gap-3 text-white/80 text-sm sm:text-base">
+              <Mail className="w-5 h-5 text-[#f75a1c] flex-shrink-0" />
+              <a href="mailto:aceleradoratras@gmail.com" className="hover:text-[#f75a1c] active:text-[#f75a1c] break-all">
                 aceleradoratras@gmail.com
               </a>
             </div>
-            <Link href="/#contacto" onClick={() => setIsOpen(false)}>
-              <Button className="w-full bg-gradient-to-r from-[#f75a1c] to-[#982704] text-white font-semibold mt-4">
+            <Link href="/#contacto" onClick={() => setIsOpen(false)} className="mt-2">
+              <Button className="w-full bg-gradient-to-r from-[#f75a1c] to-[#982704] text-white font-semibold py-6">
                 Contactar ahora
               </Button>
             </Link>

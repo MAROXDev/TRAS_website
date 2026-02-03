@@ -31,65 +31,70 @@ function CourseListItem({ course, isExpanded, onToggle }: { course: Course; isEx
     >
       {/* Main Row - Always visible */}
       <div
-        className="p-4 md:p-6 cursor-pointer"
+        className="p-3 sm:p-4 md:p-6 cursor-pointer"
         onClick={onToggle}
         onKeyDown={(e) => e.key === "Enter" && onToggle()}
         tabIndex={0}
         role="button"
         aria-expanded={isExpanded}
       >
-        <div className="flex flex-col md:flex-row md:items-center gap-4">
-          {/* Image */}
-          <div className="relative w-full md:w-24 h-32 md:h-24 rounded-lg overflow-hidden flex-shrink-0">
-            <img
-              src={course.image || "/placeholder.svg"}
-              alt={course.title}
-              className="w-full h-full object-cover"
-            />
-            {course.featured && (
-              <div className="absolute top-1 left-1 bg-[#f75a1c] p-1 rounded">
-                <Star className="w-3 h-3 text-white fill-white" />
-              </div>
-            )}
-          </div>
-
-          {/* Title and basic info */}
-          <div className="flex-grow min-w-0">
-            <div className="flex flex-wrap items-center gap-2 mb-1">
-              <span className="bg-[#f75a1c]/10 text-[#f75a1c] text-xs font-semibold px-2 py-1 rounded">
-                {course.category}
-              </span>
-              <span className="text-[#777777] text-xs">{course.modules} modulos</span>
-            </div>
-            <h3 className="text-lg font-bold text-[#2a2c44] truncate">{course.title}</h3>
-            <p className="text-[#777777] text-sm mt-1 line-clamp-1 md:line-clamp-none">
-              {course.shortDescription || course.description.slice(0, 80) + "..."}
-            </p>
-          </div>
-
-          {/* Price and action */}
-          <div className="flex items-center gap-4 flex-shrink-0">
-            <div className="text-right">
-              <div className={`font-bold text-lg ${course.isFree ? "text-green-600" : "text-[#f75a1c]"}`}>
-                {course.price}
-              </div>
-              {course.personalizado && (
-                <div className="text-xs text-[#777777]">
-                  Personal: {course.personalizado}
+        <div className="flex flex-col gap-3 sm:gap-4">
+          {/* Mobile: Image + Basic Info */}
+          <div className="flex gap-3 sm:gap-4">
+            {/* Image */}
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden flex-shrink-0">
+              <img
+                src={course.image || "/placeholder.svg"}
+                alt={course.title}
+                className="w-full h-full object-cover"
+              />
+              {course.featured && (
+                <div className="absolute top-1 left-1 bg-[#f75a1c] p-1 rounded">
+                  <Star className="w-3 h-3 text-white fill-white" />
                 </div>
               )}
+            </div>
+
+            {/* Title and basic info */}
+            <div className="flex-grow min-w-0">
+              <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
+                <span className="bg-[#f75a1c]/10 text-[#f75a1c] text-[10px] sm:text-xs font-semibold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+                  {course.category}
+                </span>
+                <span className="text-[#777777] text-[10px] sm:text-xs">{course.modules} modulos</span>
+              </div>
+              <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#2a2c44] line-clamp-2">{course.title}</h3>
+              <p className="text-[#777777] text-xs sm:text-sm mt-1 line-clamp-2 hidden sm:block">
+                {course.shortDescription || course.description.slice(0, 80) + "..."}
+              </p>
+            </div>
+          </div>
+
+          {/* Price and action - separate row on mobile */}
+          <div className="flex items-center justify-between gap-2 sm:gap-4 pt-2 border-t border-[#f4f4f4] sm:border-0 sm:pt-0">
+            <div className="flex items-center gap-2 sm:gap-4">
+              <div>
+                <div className={`font-bold text-base sm:text-lg ${course.isFree ? "text-green-600" : "text-[#f75a1c]"}`}>
+                  {course.price}
+                </div>
+                {course.personalizado && (
+                  <div className="text-[10px] sm:text-xs text-[#777777]">
+                    Personal: {course.personalizado}
+                  </div>
+                )}
+              </div>
             </div>
             <div className="flex items-center gap-2">
               <Link href={course.paymentLink || "/#contacto"} onClick={(e) => e.stopPropagation()}>
                 <Button
                   size="sm"
-                  className="bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold"
+                  className="bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold text-xs sm:text-sm px-2 sm:px-3"
                 >
-                  <CreditCard className="w-4 h-4 mr-1" />
-                  <span className="hidden sm:inline">{course.isFree ? "Acceder" : "Pagar"}</span>
+                  <CreditCard className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  {course.isFree ? "Acceder" : "Pagar"}
                 </Button>
               </Link>
-              <div className="w-8 h-8 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#f4f4f4] flex items-center justify-center">
                 {isExpanded ? (
                   <ChevronUp className="w-4 h-4 text-[#2a2c44]" />
                 ) : (
@@ -241,32 +246,32 @@ export default function SuscribirsePage() {
       </section>
 
       {/* Filters */}
-      <section className="py-6 bg-white border-b border-[#e5e5e5] sticky top-16 md:top-20 z-40">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+      <section className="py-3 sm:py-4 md:py-6 bg-white border-b border-[#e5e5e5] sticky top-14 sm:top-16 md:top-20 z-40">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {/* Search */}
-            <div className="relative w-full md:w-96">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#777777]" />
+            <div className="relative w-full">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-[#777777]" />
               <Input
                 type="text"
                 placeholder="Buscar cursos..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 border-[#e5e5e5] focus:border-[#f75a1c] focus:ring-[#f75a1c]"
+                className="pl-9 sm:pl-10 border-[#e5e5e5] focus:border-[#f75a1c] focus:ring-[#f75a1c] text-sm sm:text-base h-10 sm:h-11"
               />
             </div>
 
             {/* Category filters */}
-            <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
-              <Filter className="w-4 h-4 text-[#777777] flex-shrink-0" />
+            <div className="flex items-center gap-2 overflow-x-auto w-full pb-1 -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-hide">
+              <Filter className="w-4 h-4 text-[#777777] flex-shrink-0 hidden sm:block" />
               {courseCategories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-colors flex-shrink-0 ${
                     selectedCategory === category
                       ? "bg-[#f75a1c] text-white"
-                      : "bg-[#f4f4f4] text-[#2a2c44] hover:bg-[#f75a1c]/10"
+                      : "bg-[#f4f4f4] text-[#2a2c44] hover:bg-[#f75a1c]/10 active:bg-[#f75a1c]/20"
                   }`}
                 >
                   {category}
