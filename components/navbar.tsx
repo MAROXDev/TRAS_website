@@ -40,14 +40,12 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-10 h-10 md:w-12 md:h-12">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#f75a1c] to-[#982704] rounded-lg transform rotate-3"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white font-black text-lg md:text-xl italic">T</span>
-              </div>
+              
+              
             </div>
             <div className="flex flex-col">
-              <span className="text-white font-black text-xl md:text-2xl italic tracking-tight">TRAS</span>
-              <span className="text-[#fc8860] text-[10px] md:text-xs -mt-1">Aceleradora de Negocios</span>
+              
+              
             </div>
           </Link>
 
