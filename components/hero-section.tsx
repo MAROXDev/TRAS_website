@@ -55,7 +55,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Subtitle */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#f75a1c]/20 rounded-full mb-4 sm:mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#f75a1c]/20 rounded-full mb-4 sm:mb-[-100px]">
             <span className="w-2 h-2 bg-[#f75a1c] rounded-full animate-pulse"></span>
             <span className="text-[#fc8860] text-xs sm:text-sm font-medium">Aceleradora de Negocios</span>
           </div>
