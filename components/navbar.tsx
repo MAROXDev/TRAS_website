@@ -36,7 +36,7 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between md:h-20 h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-10 h-10 md:w-12 md:h-12">
