@@ -23,7 +23,7 @@ const team = [
   {
     name: "Consultor Senior",
     role: "Estrategia de Negocios",
-    image: "/professional-consultant-business-man-portrait.jpg",
+    image: "/Alejandra.jpg",
   },
   {
     name: "Especialista en Marketing",
