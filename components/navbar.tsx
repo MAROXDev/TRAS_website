@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/que-nos-mueve", label: "Que nos mueve" },
   { href: "/lo-que-hacemos", label: "Lo que hacemos" },
-  { href: "/casos-de-exito", label: "Casos de exito" },
+  { href: "/casos-de-exito", label: "Casos de éxito" },
   { href: "/cursos", label: "Cursos" },
   { href: "/suscribirse", label: "Suscribirse" },
   { href: "/equipo", label: "Equipo" },
