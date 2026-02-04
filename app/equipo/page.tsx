@@ -6,16 +6,10 @@ import { ArrowRight, Linkedin, Mail, Quote } from "lucide-react"
 
 const management = [
   {
-    name: "Director General",
-    role: "Fundador y CEO",
-    bio: "Líder visionario con amplia experiencia en aceleración de negocios y estrategia empresarial.",
-    image: "/professional-man-ceo-executive-portrait-suit.jpg",
-  },
-  {
-    name: "Directora de Marketing",
-    role: "Cofundadora y CMO",
-    bio: "Experta en marketing digital y estrategias de crecimiento para PYMES y emprendedores.",
-    image: "/professional-woman-executive-marketing-portrait.jpg",
+    name: "Arivey Martínez",
+    role: "Estratega Comercial",
+    bio: "",
+    image: "/Arivey.png",
   },
 ]
 
