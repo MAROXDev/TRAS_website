@@ -15,8 +15,8 @@ const management = [
 
 const team = [
   {
-    name: "Consultor Senior",
-    role: "Estrategia de Negocios",
+    name: "María Karla del Valle",
+    role: "Estratega Digital",
     image: "/Alejandra.jpg",
   },
   {
