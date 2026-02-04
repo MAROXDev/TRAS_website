@@ -8,13 +8,13 @@ const categories = ["Todos", "Marketing Digital", "Desarrollo Web", "Branding", 
 
 const cases = [
   {
-    client: "Boutique Digital",
-    industry: "Moda y Accesorios",
-    service: "Marketing Digital",
+    client: "MAROX",
+    industry: "Branding",
+    service: "Desarrollo de software",
     challenge:
-      "La tienda tenía presencia en redes pero no lograba convertir seguidores en clientes. Sus publicaciones no generaban engagement y las ventas online eran mínimas.",
+      "La marca no tenía identidad visual definida. Poseía poca consistencia visual y no destacaba dentro de su campo.",
     solution:
-      "Implementamos una estrategia integral de contenido, rediseñamos el perfil de Instagram, creamos un calendario editorial con contenido de valor y lanzamos campañas de Meta Ads segmentadas.",
+      "Creamos una identidad visual completa desde cero: logotipo, paleta de colores, tipografía, manual de marca y plantillas de flyers para su uso en redes sociales.",
     results: ["300% aumento en engagement", "150% crecimiento en ventas online", "5,000 nuevos seguidores en 3 meses"],
     testimonial:
       "TRAS transformó nuestra presencia digital. Ahora tenemos una comunidad activa que compra y recomienda nuestros productos.",
