@@ -25,9 +25,9 @@ const team = [
     image: "/karlahdez.jpeg",
   },
   {
-    name: "Desarrollador Web",
-    role: "Full Stack Developer",
-    image: "/professional-developer-programmer-man-portrait.jpg",
+    name: "Sheyla Rodríguez",
+    role: "Editora Audiovisual",
+    image: "/Sheyla.jpeg",
   },
   {
     name: "Diseñadora Gráfica",
