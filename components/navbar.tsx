@@ -45,6 +45,7 @@ export function Navbar() {
               <Image
               src='./images/isotipo.png'
               fill
+              className='object-cover'
               alt='Logotipo TRAS'
               />
               
