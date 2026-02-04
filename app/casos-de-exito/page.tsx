@@ -41,9 +41,9 @@ const cases = [
     image: "/placeholder.svg?height=400&width=600",
   },
   {
-    client: "Café Artesanal",
-    industry: "Alimentos y Bebidas",
-    service: "Branding",
+    client: "Gani",
+    industry: "Desarrollo web",
+    service: "Agencia de viajes",
     challenge:
       "La marca no tenía identidad visual definida. Usaban elementos gráficos inconsistentes y no se diferenciaban de la competencia.",
     solution:
@@ -57,25 +57,6 @@ const cases = [
       "TRAS entendió la esencia de nuestra marca. Ahora tenemos una imagen que refleja la calidad y pasión que ponemos en cada taza.",
     testimonialAuthor: "Ana Martínez",
     testimonialRole: "Propietaria",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    client: "Fashion Store Online",
-    industry: "E-commerce",
-    service: "Tienda Online",
-    challenge:
-      "Vendían solo por WhatsApp y redes sociales. El proceso era manual, lento y perdían ventas por falta de inventario visible y opciones de pago.",
-    solution:
-      "Desarrollamos una tienda online completa con catálogo dinámico, pasarelas de pago, control de inventario, y marketing automatizado para recuperación de carritos.",
-    results: [
-      "400% aumento en ventas mensuales",
-      "Automatización del 80% del proceso",
-      "Expansión a ventas nacionales",
-    ],
-    testimonial:
-      "Pasar de vender por WhatsApp a tener nuestra propia tienda fue un cambio total. Ahora vendemos las 24 horas sin esfuerzo manual.",
-    testimonialAuthor: "Laura Sánchez",
-    testimonialRole: "CEO",
     image: "/placeholder.svg?height=400&width=600",
   },
 ]
