@@ -23,9 +23,9 @@ const cases = [
     image: "/placeholder.svg?height=400&width=600",
   },
   {
-    client: "Tech Services MX",
-    industry: "Servicios de TI",
-    service: "Desarrollo Web",
+    client: "BCortes",
+    industry: "Marketing digital",
+    service: "Turismo",
     challenge:
       "Su sitio web estaba desactualizado, no era responsivo y no reflejaba la calidad de sus servicios. Perdían clientes potenciales por mala experiencia de usuario.",
     solution:
