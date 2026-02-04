@@ -29,7 +29,7 @@ const cases = [
     challenge:
       "Tenía poca presencia digital. No sabía cómo llegar a sus clientes. La difusión de su información no era lo suficientemente atractiva por lo que no se generaba engagement.",
     solution:
-      "Desarrollamos un sitio web moderno con diseño profesional, optimizado para móviles, con formularios de contacto inteligentes y secciones de casos de éxito.",
+      "Implementamos una estrategia de contenido; creamos un calendario de contenido y plantillas de flyers de rápida edición y customización para su empleo y rápida divulgación en redes.",
     results: [
       "200% más consultas desde el sitio",
       "40% reducción en tasa de rebote",
