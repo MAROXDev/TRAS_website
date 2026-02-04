@@ -49,9 +49,8 @@ const cases = [
     solution:
       "Rediseñamos el sitio web otorgándole una visualidad mucho más moderna y profesional; optimizándolo para teléfonos móviles. Se organizó la información para una mejor navegación.",
     results: [
-      "Identidad reconocible y memorable",
-      "Incremento en precio promedio de venta",
-      "Expansión a 3 nuevas sucursales",
+      "Más visitantes en el sitio",
+      "Posicionamiento en las búsquedas de Google",
     ],
     testimonial:
       "TRAS entendió la esencia de nuestra marca. Ahora tenemos una imagen que refleja la calidad y pasión que ponemos en cada taza.",
