@@ -27,7 +27,7 @@ const cases = [
     industry: "Marketing digital",
     service: "Turismo",
     challenge:
-      "Su sitio web estaba desactualizado, no era responsivo y no reflejaba la calidad de sus servicios. Perdían clientes potenciales por mala experiencia de usuario.",
+      "Tenía poca presencia digital. No sabía cómo llegar a sus clientes. La difusión de su información no era lo suficientemente atractiva por lo que no se generaba engagement.",
     solution:
       "Desarrollamos un sitio web moderno con diseño profesional, optimizado para móviles, con formularios de contacto inteligentes y secciones de casos de éxito.",
     results: [
