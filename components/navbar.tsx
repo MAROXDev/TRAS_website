@@ -42,7 +42,11 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-10 h-10 md:w-12 md:h-12">
-              
+              <Image
+              src='./images/isotipo.png'
+              fill
+              alt='Logotipo TRAS'
+              />
               
             </div>
             <div className="flex flex-col">
