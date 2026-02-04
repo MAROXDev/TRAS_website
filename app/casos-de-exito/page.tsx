@@ -15,7 +15,7 @@ const cases = [
       "La marca no tenía identidad visual definida. Poseía poca consistencia visual y no destacaba dentro de su campo.",
     solution:
       "Creamos una identidad visual completa desde cero: logotipo, paleta de colores, tipografía, manual de marca y plantillas de flyers para su uso en redes sociales.",
-    results: ["300% aumento en engagement", "150% crecimiento en ventas online", "5,000 nuevos seguidores en 3 meses"],
+    results: ["Identidad reconocible.", "Marca más segura, confiable y profesional."],
     testimonial:
       "TRAS transformó nuestra presencia digital. Ahora tenemos una comunidad activa que compra y recomienda nuestros productos.",
     testimonialAuthor: "María González",
