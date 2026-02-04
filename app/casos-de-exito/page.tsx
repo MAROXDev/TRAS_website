@@ -45,7 +45,7 @@ const cases = [
     industry: "Desarrollo web",
     service: "Agencia de viajes",
     challenge:
-      "La marca no tenía identidad visual definida. Usaban elementos gráficos inconsistentes y no se diferenciaban de la competencia.",
+      "Presentaban un sitio web desactualizado que no reflejaba la calidad ni totalidad de sus servicios. No tenían una buena arquitectura de la información. La experiencia de usuario era deficiente.",
     solution:
       "Creamos una identidad visual completa desde cero: logotipo, paleta de colores, tipografía, manual de marca y aplicaciones en empaque, menú y redes sociales.",
     results: [
