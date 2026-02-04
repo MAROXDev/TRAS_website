@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/contact-section"
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      {<Navbar />}
+      {/* <Navbar /> */}
       <HeroSection />
       <ServicesSection />
       <AboutPreview />
