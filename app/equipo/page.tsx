@@ -17,12 +17,12 @@ const team = [
   {
     name: "María Karla del Valle",
     role: "Estratega Digital",
-    image: "/Alejandra.jpg",
+    image: "/mariakarla.jpg",
   },
   {
-    name: "Especialista en Marketing",
-    role: "Social Media Manager",
-    image: "/professional-woman-social-media-marketing-portrait.jpg",
+    name: "Karla Hernández",
+    role: "Diseñadora Gráfica",
+    image: "/karlahdez.jpeg",
   },
   {
     name: "Desarrollador Web",
