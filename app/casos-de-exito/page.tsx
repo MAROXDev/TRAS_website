@@ -31,9 +31,8 @@ const cases = [
     solution:
       "Implementamos una estrategia de contenido; creamos un calendario de contenido y plantillas de flyers de rápida edición y customización para su empleo y rápida divulgación en redes.",
     results: [
-      "200% más consultas desde el sitio",
-      "40% reducción en tasa de rebote",
-      "Posicionamiento en primera página de Google",
+      "Aumento del alcance.",
+      "Nuevos clientes en promedio mensual.",
     ],
     testimonial:
       "El nuevo sitio web nos posicionó como líderes en nuestro sector. Los clientes nos encuentran fácilmente y la primera impresión es profesional.",
