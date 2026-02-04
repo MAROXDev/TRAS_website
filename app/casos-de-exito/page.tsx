@@ -4,18 +4,18 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Quote } from "lucide-react"
 
-const categories = ["Todos", "Marketing Digital", "Desarrollo Web", "Branding", "E-commerce", "Asesoría Estratégica"]
+const categories = ["Todos", "Marketing Digital", "Desarrollo de software", "Branding", "Turismo", "Desarrollo web"]
 
 const cases = [
   {
-    client: "Boutique Digital",
-    industry: "Moda y Accesorios",
-    service: "Marketing Digital",
+    client: "MAROX",
+    industry: "Branding",
+    service: "Desarrollo de software",
     challenge:
-      "La tienda tenía presencia en redes pero no lograba convertir seguidores en clientes. Sus publicaciones no generaban engagement y las ventas online eran mínimas.",
+      "La marca no tenía identidad visual definida. Poseía poca consistencia visual y no destacaba dentro de su campo.",
     solution:
-      "Implementamos una estrategia integral de contenido, rediseñamos el perfil de Instagram, creamos un calendario editorial con contenido de valor y lanzamos campañas de Meta Ads segmentadas.",
-    results: ["300% aumento en engagement", "150% crecimiento en ventas online", "5,000 nuevos seguidores en 3 meses"],
+      "Creamos una identidad visual completa desde cero: logotipo, paleta de colores, tipografía, manual de marca y plantillas de flyers para su uso en redes sociales.",
+    results: ["Identidad reconocible.", "Marca más segura, confiable y profesional."],
     testimonial:
       "TRAS transformó nuestra presencia digital. Ahora tenemos una comunidad activa que compra y recomienda nuestros productos.",
     testimonialAuthor: "María González",
@@ -23,17 +23,16 @@ const cases = [
     image: "/placeholder.svg?height=400&width=600",
   },
   {
-    client: "Tech Services MX",
-    industry: "Servicios de TI",
-    service: "Desarrollo Web",
+    client: "BCortes",
+    industry: "Marketing digital",
+    service: "Turismo",
     challenge:
-      "Su sitio web estaba desactualizado, no era responsivo y no reflejaba la calidad de sus servicios. Perdían clientes potenciales por mala experiencia de usuario.",
+      "Tenía poca presencia digital. No sabía cómo llegar a sus clientes. La difusión de su información no era lo suficientemente atractiva por lo que no se generaba engagement.",
     solution:
-      "Desarrollamos un sitio web moderno con diseño profesional, optimizado para móviles, con formularios de contacto inteligentes y secciones de casos de éxito.",
+      "Implementamos una estrategia de contenido; creamos un calendario de contenido y plantillas de flyers de rápida edición y customización para su empleo y rápida divulgación en redes.",
     results: [
-      "200% más consultas desde el sitio",
-      "40% reducción en tasa de rebote",
-      "Posicionamiento en primera página de Google",
+      "Aumento del alcance.",
+      "Nuevos clientes en promedio mensual.",
     ],
     testimonial:
       "El nuevo sitio web nos posicionó como líderes en nuestro sector. Los clientes nos encuentran fácilmente y la primera impresión es profesional.",
@@ -42,41 +41,21 @@ const cases = [
     image: "/placeholder.svg?height=400&width=600",
   },
   {
-    client: "Café Artesanal",
-    industry: "Alimentos y Bebidas",
-    service: "Branding",
+    client: "Gani",
+    industry: "Desarrollo web",
+    service: "Agencia de viajes",
     challenge:
-      "La marca no tenía identidad visual definida. Usaban elementos gráficos inconsistentes y no se diferenciaban de la competencia.",
+      "Presentaban un sitio web desactualizado que no reflejaba la calidad ni totalidad de sus servicios. No tenían una buena arquitectura de la información. La experiencia de usuario era deficiente.",
     solution:
-      "Creamos una identidad visual completa desde cero: logotipo, paleta de colores, tipografía, manual de marca y aplicaciones en empaque, menú y redes sociales.",
+      "Rediseñamos el sitio web otorgándole una visualidad mucho más moderna y profesional; optimizándolo para teléfonos móviles. Se organizó la información para una mejor navegación.",
     results: [
-      "Identidad reconocible y memorable",
-      "Incremento en precio promedio de venta",
-      "Expansión a 3 nuevas sucursales",
+      "Más visitantes en el sitio",
+      "Posicionamiento en las búsquedas de Google",
     ],
     testimonial:
       "TRAS entendió la esencia de nuestra marca. Ahora tenemos una imagen que refleja la calidad y pasión que ponemos en cada taza.",
     testimonialAuthor: "Ana Martínez",
     testimonialRole: "Propietaria",
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    client: "Fashion Store Online",
-    industry: "E-commerce",
-    service: "Tienda Online",
-    challenge:
-      "Vendían solo por WhatsApp y redes sociales. El proceso era manual, lento y perdían ventas por falta de inventario visible y opciones de pago.",
-    solution:
-      "Desarrollamos una tienda online completa con catálogo dinámico, pasarelas de pago, control de inventario, y marketing automatizado para recuperación de carritos.",
-    results: [
-      "400% aumento en ventas mensuales",
-      "Automatización del 80% del proceso",
-      "Expansión a ventas nacionales",
-    ],
-    testimonial:
-      "Pasar de vender por WhatsApp a tener nuestra propia tienda fue un cambio total. Ahora vendemos las 24 horas sin esfuerzo manual.",
-    testimonialAuthor: "Laura Sánchez",
-    testimonialRole: "CEO",
     image: "/placeholder.svg?height=400&width=600",
   },
 ]

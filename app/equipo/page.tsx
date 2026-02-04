@@ -6,39 +6,33 @@ import { ArrowRight, Linkedin, Mail, Quote } from "lucide-react"
 
 const management = [
   {
-    name: "Director General",
-    role: "Fundador y CEO",
-    bio: "Líder visionario con amplia experiencia en aceleración de negocios y estrategia empresarial.",
-    image: "/professional-man-ceo-executive-portrait-suit.jpg",
-  },
-  {
-    name: "Directora de Marketing",
-    role: "Cofundadora y CMO",
-    bio: "Experta en marketing digital y estrategias de crecimiento para PYMES y emprendedores.",
-    image: "/professional-woman-executive-marketing-portrait.jpg",
+    name: "Arivey Martínez",
+    role: "Estratega Comercial",
+    bio: "",
+    image: "/Arivey.png",
   },
 ]
 
 const team = [
   {
-    name: "Consultor Senior",
-    role: "Estrategia de Negocios",
-    image: "/professional-consultant-business-man-portrait.jpg",
+    name: "María Karla del Valle",
+    role: "Estratega Digital",
+    image: "/mariakarla.jpg",
   },
   {
-    name: "Especialista en Marketing",
-    role: "Social Media Manager",
-    image: "/professional-woman-social-media-marketing-portrait.jpg",
+    name: "Karla Hernández",
+    role: "Diseñadora Gráfica",
+    image: "/karlahdez.jpeg",
   },
   {
-    name: "Desarrollador Web",
-    role: "Full Stack Developer",
-    image: "/professional-developer-programmer-man-portrait.jpg",
+    name: "Sheyla Rodríguez",
+    role: "Editora Audiovisual",
+    image: "/Sheyla.jpeg",
   },
   {
-    name: "Diseñadora Gráfica",
-    role: "Brand Designer",
-    image: "/professional-graphic-designer-woman-creative-portr.jpg",
+    name: "Alejandra Vázquez",
+    role: "Diseñadora Gráfica y Audiovisual",
+    image: "/Alejandra.jpg",
   },
 ]
 
