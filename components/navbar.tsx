@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
+  { href: "/", label: "Inicio" },
   { href: "/que-nos-mueve", label: "Que nos mueve" },
   { href: "/lo-que-hacemos", label: "Lo que hacemos" },
-  { href: "/casos-de-exito", label: "Casos de exito" },
+  { href: "/casos-de-exito", label: "Casos de éxito" },
   { href: "/cursos", label: "Cursos" },
   { href: "/suscribirse", label: "Suscribirse" },
   { href: "/equipo", label: "Equipo" },
@@ -35,12 +37,17 @@ export function Navbar() {
         scrolled ? "bg-[#2a2c44]/95 backdrop-blur-md shadow-lg" : "bg-transparent",
       )}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         <div className="flex items-center justify-between md:h-20 h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-10 h-10 md:w-12 md:h-12">
-              
+              <Image
+              src='./isotipo.png'
+              fill
+              className='object-cover'
+              alt='Logotipo TRAS'
+              />
               
             </div>
             <div className="flex flex-col">
