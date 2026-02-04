@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Quote } from "lucide-react"
 
-const categories = ["Todos", "Marketing Digital", "Desarrollo Web", "Branding", "E-commerce", "Asesoría Estratégica"]
+const categories = ["Todos", "Marketing Digital", "Desarrollo de software", "Branding", "Turismo", "Desarrollo web"]
 
 const cases = [
   {
