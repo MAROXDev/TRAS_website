@@ -30,9 +30,9 @@ const team = [
     image: "/Sheyla.jpeg",
   },
   {
-    name: "Diseñadora Gráfica",
-    role: "Brand Designer",
-    image: "/professional-graphic-designer-woman-creative-portr.jpg",
+    name: "Alejandra Vázquez",
+    role: "Diseñadora Gráfica y Audiovisual",
+    image: "/Alejandra.jpg",
   },
 ]
 
