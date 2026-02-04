@@ -15,7 +15,7 @@ const navLinks = [
   { href: "/cursos", label: "Cursos" },
   { href: "/suscribirse", label: "Suscribirse" },
   { href: "/equipo", label: "Equipo" },
-  { href: "/blog", label: "Blog" },
+ // { href: "/blog", label: "Blog" },
 ]
 
 export function Navbar() {
