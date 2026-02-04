@@ -47,7 +47,7 @@ const cases = [
     challenge:
       "Presentaban un sitio web desactualizado que no reflejaba la calidad ni totalidad de sus servicios. No tenían una buena arquitectura de la información. La experiencia de usuario era deficiente.",
     solution:
-      "Creamos una identidad visual completa desde cero: logotipo, paleta de colores, tipografía, manual de marca y aplicaciones en empaque, menú y redes sociales.",
+      "Rediseñamos el sitio web otorgándole una visualidad mucho más moderna y profesional; optimizándolo para teléfonos móviles. Se organizó la información para una mejor navegación.",
     results: [
       "Identidad reconocible y memorable",
       "Incremento en precio promedio de venta",
