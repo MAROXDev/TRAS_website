@@ -84,8 +84,8 @@ function CountdownTimer({ variant = "light" }: { variant?: "light" | "dark" }) {
 // Carousel images placeholders
 const carouselImages = [
   { id: 1, alt: "Plataforma TRAS - Vista 1", src: "https://i.postimg.cc/3JmS4x9R/austin-distel-go-FBjl-Qi-ZFU-unsplash.jpg" },
-  { id: 2, alt: "Plataforma TRAS - Vista 2" },
-  { id: 3, alt: "Plataforma TRAS - Vista 3" },
+  { id: 2, alt: "Plataforma TRAS - Vista 2", src: "https://i.postimg.cc/VLnGrk45/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg" },
+  { id: 3, alt: "Plataforma TRAS - Vista 3", src: "https://i.postimg.cc/jqG3S7H4/dlxmedia-hu-Gz4AEq4QN5g-unsplash.jpg" },
   { id: 4, alt: "Plataforma TRAS - Vista 4" },
 ]
 
@@ -169,8 +169,8 @@ function ImageCarousel() {
               }
             }}
             className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
-                ? "bg-gradient-to-r from-[#f75a1c] to-[#982704] w-8"
-                : "bg-[#d1d1d1] hover:bg-[#999999]"
+              ? "bg-gradient-to-r from-[#f75a1c] to-[#982704] w-8"
+              : "bg-[#d1d1d1] hover:bg-[#999999]"
               }`}
             aria-label={`Ir a slide ${index + 1}`}
           />
