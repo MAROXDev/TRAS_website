@@ -126,57 +126,63 @@ function ImageCarousel() {
               key={image.id}
               className="w-full flex-shrink-0 aspect-video bg-gradient-to-br from-[#f4f4f4] to-white flex items-center justify-center"
             >
-              <div className="text-center p-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#f75a1c]/20 to-[#982704]/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-10 h-10 text-[#f75a1c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-[#777777] font-medium">{image.alt}</p>
-                <p className="text-[#999999] text-sm mt-1">Slide {index + 1} de {carouselImages.length}</p>
+              {/* <div className="text-center p-8">
+             </div> */}
+              <img
+                src={image.src}
+                key={`${"image - " + index}`}
+                alt={image.alt}
+                className="w-full h-full object-cover" />
+              <div className="w-20 h-20 bg-gradient-to-br from-[#f75a1c]/20 to-[#982704]/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-10 h-10 text-[#f75a1c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
               </div>
+              <p className="text-[#777777] font-medium">{image.alt}</p>
+              <p className="text-[#999999] text-sm mt-1">Slide {index + 1} de {carouselImages.length}</p>
+            </div>
             </div>
           ))}
-        </div>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={goToPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
-          aria-label="Anterior"
-        >
-          <ChevronLeft className="w-6 h-6 text-[#2a2c44]" />
-        </button>
-        <button
-          onClick={goToNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
-          aria-label="Siguiente"
-        >
-          <ChevronRight className="w-6 h-6 text-[#2a2c44]" />
-        </button>
       </div>
 
-      {/* Dots Indicator */}
-      <div className="flex justify-center gap-2 mt-6">
-        {carouselImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              if (!isAnimating) {
-                setIsAnimating(true)
-                setCurrentIndex(index)
-                setTimeout(() => setIsAnimating(false), 500)
-              }
-            }}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
-              ? "bg-gradient-to-r from-[#f75a1c] to-[#982704] w-8"
-              : "bg-[#d1d1d1] hover:bg-[#999999]"
-              }`}
-            aria-label={`Ir a slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
+        aria-label="Anterior"
+      >
+        <ChevronLeft className="w-6 h-6 text-[#2a2c44]" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
+        aria-label="Siguiente"
+      >
+        <ChevronRight className="w-6 h-6 text-[#2a2c44]" />
+      </button>
     </div>
+
+      {/* Dots Indicator */ }
+  <div className="flex justify-center gap-2 mt-6">
+    {carouselImages.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => {
+          if (!isAnimating) {
+            setIsAnimating(true)
+            setCurrentIndex(index)
+            setTimeout(() => setIsAnimating(false), 500)
+          }
+        }}
+        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
+          ? "bg-gradient-to-r from-[#f75a1c] to-[#982704] w-8"
+          : "bg-[#d1d1d1] hover:bg-[#999999]"
+          }`}
+        aria-label={`Ir a slide ${index + 1}`}
+      />
+    ))}
+  </div>
+    </div >
   )
 }
 
