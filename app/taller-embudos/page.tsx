@@ -5,11 +5,11 @@ import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { 
-  Medal, 
-  Target, 
-  TrendingUp, 
-  Eye, 
+import {
+  Medal,
+  Target,
+  TrendingUp,
+  Eye,
   Filter,
   Brain,
   User,
@@ -83,7 +83,7 @@ function CountdownTimer({ variant = "light" }: { variant?: "light" | "dark" }) {
 
 // Carousel images placeholders
 const carouselImages = [
-  { id: 1, alt: "Plataforma TRAS - Vista 1" },
+  { id: 1, alt: "Plataforma TRAS - Vista 1", src: "https://i.postimg.cc/3JmS4x9R/austin-distel-go-FBjl-Qi-ZFU-unsplash.jpg" },
   { id: 2, alt: "Plataforma TRAS - Vista 2" },
   { id: 3, alt: "Plataforma TRAS - Vista 3" },
   { id: 4, alt: "Plataforma TRAS - Vista 4" },
@@ -117,13 +117,13 @@ function ImageCarousel() {
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white">
-        <div 
+        <div
           className="flex transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {carouselImages.map((image, index) => (
-            <div 
-              key={image.id} 
+            <div
+              key={image.id}
               className="w-full flex-shrink-0 aspect-video bg-gradient-to-br from-[#f4f4f4] to-white flex items-center justify-center"
             >
               <div className="text-center p-8">
@@ -168,11 +168,10 @@ function ImageCarousel() {
                 setTimeout(() => setIsAnimating(false), 500)
               }
             }}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              index === currentIndex 
-                ? "bg-gradient-to-r from-[#f75a1c] to-[#982704] w-8" 
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
+                ? "bg-gradient-to-r from-[#f75a1c] to-[#982704] w-8"
                 : "bg-[#d1d1d1] hover:bg-[#999999]"
-            }`}
+              }`}
             aria-label={`Ir a slide ${index + 1}`}
           />
         ))}
@@ -289,7 +288,7 @@ export default function TallerEmbudosPage() {
               <div className="text-center p-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#f75a1c] to-[#982704] rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
+                    <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
                 <p className="text-[#777777]">Video del taller</p>
@@ -495,7 +494,7 @@ export default function TallerEmbudosPage() {
                 aria-label="Facebook"
               >
                 <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
             </div>
