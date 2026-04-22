@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/lo-que-hacemos", label: "Lo que hacemos" },
   { href: "/casos-de-exito", label: "Casos de éxito" },
   { href: "/cursos", label: "Cursos" },
+  { href: "/taller-embudos", label: "Taller de Embudos" },
   { href: "/suscribirse", label: "Suscribirse" },
   { href: "/equipo", label: "Equipo" },
  // { href: "/blog", label: "Blog" },
