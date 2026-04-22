@@ -274,8 +274,8 @@ export default function TallerEmbudosPage() {
                 </span>
                 )
               </h2>
-              <p className="text-[#777777] text-lg mt-6 leading-relaxed">
-                En este breve adelanto verás la metodología exacta que utilizamos para que las Pymes en México dejen de &quot;postear por postear&quot; y comiencen a generar prospectos calificados todos los días.
+              <p className="text-[#777777] text-lg mt-6 leading-relaxed text-left">
+                Aplicamos una metodología exacta que utilizamos para que las Pymes en México dejen de &quot;postear por postear&quot; y comiencen a generar prospectos calificados todos los días.
               </p>
               {/* CTA Button */}
               <div className="mt-8 flex justify-center lg:justify-start">
@@ -290,16 +290,13 @@ export default function TallerEmbudosPage() {
               </div>
             </div>
 
-            {/* Right Content - Video Embed */}
-            <div className="aspect-video bg-[#f4f4f4] rounded-2xl overflow-hidden shadow-lg flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#f75a1c] to-[#982704] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-[#777777]">Video del taller</p>
-              </div>
+            {/* Right Content - Image */}
+            <div className="aspect-video bg-[#f4f4f4] rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="https://i.postimg.cc/Nj9ZshCb/getty-images-MVg6my-DAa4-unsplash.jpg"
+                alt="Metodología TRAS para PyMEs"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
