@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { BuyNowDialog } from "@/components/buy-now-dialog"
 import { ArrowRight, Clock, Users, Award, Play, CreditCard } from "lucide-react"
 import { coursesData } from "@/lib/courses-data"
 
@@ -73,12 +74,16 @@ export function CoursesPreview() {
                 </div>
 
                 {/* Pay Button */}
-                <Link href={course.paymentLink || "/#contacto"}>
+                <BuyNowDialog
+                  courseTitle={course.shortTitle || course.title}
+                  coursePrice={course.price}
+                  isFree={course.isFree}
+                >
                   <Button className="w-full bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold">
                     <CreditCard className="w-4 h-4 mr-2" />
                     {course.isFree ? "Acceder Gratis" : `Pagar ${course.price}`}
                   </Button>
-                </Link>
+                </BuyNowDialog>
               </div>
             </div>
           ))}
