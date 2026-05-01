@@ -33,15 +33,17 @@ type FormData = z.infer<typeof schema>
 interface BuyNowDialogProps {
   courseTitle: string
   coursePrice: string
+  productId?: string
   isFree?: boolean
   children: React.ReactNode
 }
 
-type SubmitStatus = "idle" | "loading" | "success" | "error"
+type SubmitStatus = "idle" | "loading" | "success" | "error" | "no-credentials"
 
 export function BuyNowDialog({
   courseTitle,
   coursePrice,
+  productId,
   isFree = false,
   children,
 }: BuyNowDialogProps) {
@@ -68,13 +70,34 @@ export function BuyNowDialog({
   async function onSubmit(data: FormData) {
     setStatus("loading")
     try {
-      // TODO: implement purchase endpoint
-      await fetch("/api/purchase", {
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:8000"
+      const origin = typeof window !== "undefined" ? window.location.origin : "https://tras.com.mx"
+      const res = await fetch(`${backendUrl}/api/backoffice/orders/create/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, courseTitle, coursePrice }),
+        body: JSON.stringify({
+          product_id: productId,
+          customer_name: `${data.nombre} ${data.apellido}`,
+          customer_email: data.email,
+          customer_phone: data.telefono,
+          success_url: `${origin}/pago-exitoso`,
+          cancel_url: `${origin}/cursos`,
+        }),
       })
-      setStatus("success")
+      const json = await res.json()
+      if (!res.ok || !json.success) {
+        if (json.message?.toLowerCase().includes("credencial")) {
+          setStatus("no-credentials")
+        } else {
+          setStatus("error")
+        }
+        return
+      }
+      if (json.data?.checkout_url) {
+        window.location.href = json.data.checkout_url
+      } else {
+        setStatus("success")
+      }
     } catch {
       setStatus("error")
     }
@@ -219,13 +242,18 @@ export function BuyNowDialog({
                       Ocurrió un error. Por favor intenta de nuevo.
                     </p>
                   )}
+                  {status === "no-credentials" && (
+                    <p className="text-xs text-[#982704] bg-[#982704]/8 border border-[#982704]/20 rounded-lg px-3 py-2">
+                      No hay lugares disponibles en este momento. Contáctanos directamente.
+                    </p>
+                  )}
                 </div>
 
                 {/* Footer */}
                 <div className="px-6 pb-6 pt-4">
                   <button
                     type="submit"
-                    disabled={status === "loading"}
+                    disabled={status === "loading" || status === "no-credentials"}
                     className={cn(
                       "w-full h-11 rounded-xl font-semibold text-sm text-white flex items-center justify-center gap-2",
                       "bg-gradient-to-r from-[#f75a1c] to-[#982704]",
