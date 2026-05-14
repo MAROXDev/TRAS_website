@@ -67,7 +67,7 @@ export function BuyNowDialog({
   async function onSubmit(data: FormData) {
     setStatus("loading")
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "https://tras.com.mx"
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
       const origin = typeof window !== "undefined" ? window.location.origin : "https://tras.com.mx"
       const res = await fetch(`${backendUrl}/admin/api/backoffice/orders/create/`, {
         method: "POST",
