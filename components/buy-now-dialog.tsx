@@ -22,10 +22,7 @@ const schema = z.object({
   nombre: z.string().min(2, "Mínimo 2 caracteres"),
   apellido: z.string().min(2, "Mínimo 2 caracteres"),
   email: z.string().email("Correo inválido"),
-  telefono: z
-    .string()
-    .min(7, "Teléfono inválido")
-    .regex(/^[+\d\s\-()]{7,20}$/, "Solo dígitos, espacios o +/-"),
+  telefono: z.string().min(1, "Ingresa tu teléfono"),
 })
 
 type FormData = z.infer<typeof schema>
@@ -70,9 +67,9 @@ export function BuyNowDialog({
   async function onSubmit(data: FormData) {
     setStatus("loading")
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:8000"
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "https://tras.com.mx"
       const origin = typeof window !== "undefined" ? window.location.origin : "https://tras.com.mx"
-      const res = await fetch(`${backendUrl}/api/backoffice/orders/create/`, {
+      const res = await fetch(`${backendUrl}/admin/api/backoffice/orders/create/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -85,7 +82,7 @@ export function BuyNowDialog({
         }),
       })
       const json = await res.json()
-      if (!res.ok || !json.success) {
+if (!res.ok || !json.success) {
         if (json.message?.toLowerCase().includes("credencial")) {
           setStatus("no-credentials")
         } else {

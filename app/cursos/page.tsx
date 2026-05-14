@@ -127,6 +127,7 @@ export default function CursosPage() {
                       <BuyNowDialog
                         courseTitle={course.title}
                         coursePrice={course.price}
+                        productId={course.productId}
                         isFree={course.isFree}
                       >
                         <Button className="bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold">
@@ -138,6 +139,7 @@ export default function CursosPage() {
                         <BuyNowDialog
                           courseTitle={`${course.title} — Personalizado`}
                           coursePrice={course.personalizado}
+                          productId={course.personalizadoProductId}
                         >
                           <Button
                             variant="outline"

@@ -19,6 +19,8 @@ export interface Course {
   paymentLink?: string
   personalizadoPaymentLink?: string
   isFree?: boolean
+  productId?: string
+  personalizadoProductId?: string
 }
 
 export const coursesData: Course[] = [
@@ -50,6 +52,8 @@ export const coursesData: Course[] = [
     featured: true,
     paymentLink: "#pago-whatsapp",
     personalizadoPaymentLink: "#pago-whatsapp-personalizado",
+    productId: "38cbae47-2685-4ab4-a925-ffa24b0ff614",
+    personalizadoProductId: "ce0dc3fd-b417-4138-b100-62af6429786f",
   },
   {
     id: "contabilidad-cero",
@@ -78,6 +82,8 @@ export const coursesData: Course[] = [
     image: "/accounting-calculator-financial-documents-business.jpg",
     paymentLink: "#pago-contabilidad",
     personalizadoPaymentLink: "#pago-contabilidad-personalizado",
+    productId: "a1e044b4-7fcf-445a-a143-4f129f4aa79b",
+    personalizadoProductId: "fb0cae51-d327-4dee-9660-6ac38fd2ac63",
   },
   {
     id: "intro-ia",
@@ -97,6 +103,7 @@ export const coursesData: Course[] = [
     image: "/artificial-intelligence-robot-technology-futuristi.jpg",
     isFree: true,
     paymentLink: "#acceso-gratis-ia",
+    productId: "63b1f226-3714-4495-a352-c5ae40116859",
   },
   {
     id: "ia-principiantes",
@@ -125,6 +132,8 @@ export const coursesData: Course[] = [
     image: "/ai-prompts-chatbot-business-automation.jpg",
     paymentLink: "#pago-ia-principiantes",
     personalizadoPaymentLink: "#pago-ia-principiantes-personalizado",
+    productId: "fa947a79-480c-4b81-b38c-7e66993be87e",
+    personalizadoProductId: "d722e852-a065-45a4-8bde-68bc501a0359",
   },
 ]
 

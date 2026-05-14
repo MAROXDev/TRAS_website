@@ -77,6 +77,7 @@ export function CoursesPreview() {
                 <BuyNowDialog
                   courseTitle={course.shortTitle || course.title}
                   coursePrice={course.price}
+                  productId={course.productId}
                   isFree={course.isFree}
                 >
                   <Button className="w-full bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold">
