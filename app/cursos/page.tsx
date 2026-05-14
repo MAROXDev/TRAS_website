@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { BuyNowDialog } from "@/components/buy-now-dialog"
 import Link from "next/link"
 import { ArrowRight, Clock, Users, Award, CheckCircle, Play, BookOpen, CreditCard } from "lucide-react"
 import { coursesData, upcomingCourses } from "@/lib/courses-data"
@@ -123,14 +124,23 @@ export default function CursosPage() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4">
-                      <Link href={course.paymentLink || "/#contacto"}>
+                      <BuyNowDialog
+                        courseTitle={course.title}
+                        coursePrice={course.price}
+                        productId={course.productId}
+                        isFree={course.isFree}
+                      >
                         <Button className="bg-gradient-to-r from-[#f75a1c] to-[#982704] hover:from-[#fc8860] hover:to-[#f75a1c] text-white font-semibold">
                           <CreditCard className="mr-2 w-4 h-4" />
                           {course.isFree ? "Acceder gratis" : `Pagar ${course.price}`}
                         </Button>
-                      </Link>
+                      </BuyNowDialog>
                       {course.personalizado && (
-                        <Link href={course.personalizadoPaymentLink || "/#contacto"}>
+                        <BuyNowDialog
+                          courseTitle={`${course.title} — Personalizado`}
+                          coursePrice={course.personalizado}
+                          productId={course.personalizadoProductId}
+                        >
                           <Button
                             variant="outline"
                             className="border-2 border-[#2a2c44] text-[#2a2c44] hover:bg-[#2a2c44] hover:text-white font-semibold bg-transparent"
@@ -138,7 +148,7 @@ export default function CursosPage() {
                             <CreditCard className="mr-2 w-4 h-4" />
                             Pagar Personalizado {course.personalizado}
                           </Button>
-                        </Link>
+                        </BuyNowDialog>
                       )}
                       <Link href="/#contacto">
                         <Button
